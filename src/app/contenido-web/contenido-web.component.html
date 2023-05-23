@@ -1,40 +1,50 @@
 <div class="container_form"></div>
 <h1>Listado de bebidas</h1>
 
-
-  
-  
-
 <table>
-    <div *ngIf="(datoRecibido==1); then thenBlock else elseBlock"></div>
-    <ng-template #thenBlock>
-        <div class="container">
-        <div class="row">
+  <div *ngIf="(datoRecibido==1); then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <div class="container">
+      <div class="row">
         <tr>
-            <td *ngFor="let item of lista">
-                  <div class="col-md-4" >
-                    <div class="card">
-                      <img src="../../assets/background.jpg" class="card-img-top" alt="Imagen de bebida {{item.id}}">
-                      <div class="card-body">
-                        <h5 class="card-title">{{ item.id }}</h5>
-                        <p class="card-text">{{ item.nombre }}</p>
-                      </div>
-                    </div>
-                  </div>
-            </td>   
-           <!--  <td> {{ item.id }} </td>
+          <td *ngFor="let item of lista">
+            <div class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://w0.peakpx.com/wallpaper/823/850/HD-wallpaper-coco-cola-beverage-bomb-comic-drink-funny-icecek-joke-kola-potable.jpg"
+                  class="card-img-top" alt="Imagen de bebida {{item.id}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.id }}</h5>
+                  <p class="card-text">{{ item.nombre }}</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <!--  <td> {{ item.id }} </td>
             <td> {{ item.nombre }} </td> -->
         </tr>
+      </div>
     </div>
-    </div>
-    </ng-template>
-    <ng-template #elseBlock>
-        <div *ngFor="let item1 of lista">
-        <tr *ngIf="(item1.permite == 1)">
-            
-                <td> {{ item1.id }} </td>
-                <td> {{ item1.nombre }} </td>
+  </ng-template>
+  <ng-template #elseBlock>
+    <div class="container">
+      <div class="row">
+        <tr>
+          <td *ngFor="let item1 of lista">
+            <div *ngIf="(item1.permite == 1)" class="col-md-4">
+              <div class="card">
+                <img
+                  src="https://w0.peakpx.com/wallpaper/823/850/HD-wallpaper-coco-cola-beverage-bomb-comic-drink-funny-icecek-joke-kola-potable.jpg"
+                  class="card-img-top" alt="Imagen de bebida {{item1.id}}">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item1.id }}</h5>
+                  <p class="card-text">{{ item1.nombre }}</p>
+                </div>
+              </div>
+            </div>
+          </td>
         </tr>
+      </div>
     </div>
-    </ng-template>
+  </ng-template>
 </table>

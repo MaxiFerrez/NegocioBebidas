@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ContenidoWebComponent } from './contenido-web/contenido-web.component';
 import { FormsModule } from '@angular/forms';
 import { FormInicialComponent } from './form-inicial/form-inicial.component';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContenidoWebComponent,
-    FormInicialComponent
+    FormInicialComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

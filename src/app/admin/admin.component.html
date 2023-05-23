@@ -1,0 +1,47 @@
+<form class="form-row">
+    <div class="form-group col-md-8">
+        <label for="id" required>ID de la Bebida</label>
+        <input type="number" name="id" id="id" placeholder="ID de la bebida" class="form-control" [(ngModel)]="idInput"
+            required>
+    </div>
+    <div class="form-group col-md-8">
+        <label for="nombre" required>Nombre de la Bebida</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre de la Bebida" class="form-control"
+            [(ngModel)]="nombreInput" required>
+    </div>
+    <div class="form-group col-md-8">
+        <label for="permite" required></label>
+        <input type="number" name="permite" id="permite" placeholder="1 si +18" class="form-control"
+            [(ngModel)]="permiteInput" required>
+    </div>
+
+    <div class="form-group col-md-8">
+        <label for="permite" required></label>
+        <input type="text" name="img" id="img" placeholder="Url Img" class="form-control" [(ngModel)]="imgInput"
+            required>
+    </div>
+
+    <div style="text-align: center">
+        <button class="btn btn-primary" style="cursor: pointer" type="submit" (click)="agregar()">Agregar Bebida</button>
+    </div>
+
+</form>
+
+<ul>
+    <td *ngFor="let item of lista1 ; let i = index">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{{item.img}}" class="card-img-top" alt="Imagen de bebida {{item.id}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.id }}</h5>
+                    <p class="card-text">{{ item.nombre }}</p>
+                    <form>
+                        <input type="number" name="permite" id="permite" placeholder="{{i}}" hidden>
+                        <button class="btn btn-danger" type="submit" style="cursor: pointer" (click)="eliminar(i)">Eliminar</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </td>
+</ul>
