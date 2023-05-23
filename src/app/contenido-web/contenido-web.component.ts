@@ -13,12 +13,11 @@ export class ContenidoWebComponent {
   datoRecibido: number;
 
   lista: Bebida[] = [
-    { id: 1, nombre: 'Licor', permite: 0, img:"w0.peakpx.com/wallpaper/823/850/HD-wallpaper-coco-cola-beverage-bomb-comic-drink-funny-icecek-joke-kola-potable.jpg"},
-    { id: 2, nombre: 'Fernet', permite: 0, img:"w0.peakpx.com/wallpaper/823/850/HD-wallpaper-coco-cola-beverage-bomb-comic-drink-funny-icecek-joke-kola-potable.jpg"},
-    { id: 3, nombre: 'Coca-Cola', permite: 1, img:"w0.peakpx.com/wallpaper/823/850/HD-wallpaper-coco-cola-beverage-bomb-comic-drink-funny-icecek-joke-kola-potable.jpg"},
-    { id: 4, nombre: 'Jugo', permite: 1, img:"w0.peakpx.com/wallpaper/823/850/HD-wallpaper-coco-cola-beverage-bomb-comic-drink-funny-icecek-joke-kola-potable.jpg"},
-    { id: 5, nombre: 'Votka', permite: 0, img:"w0.peakpx.com/wallpaper/823/850/HD-wallpaper-coco-cola-beverage-bomb-comic-drink-funny-icecek-joke-kola-potable.jpg"},
-    { id: 6, nombre: 'Agua Tonica', permite: 1, img:"w0.peakpx.com/wallpaper/823/850/HD-wallpaper-coco-cola-beverage-bomb-comic-drink-funny-icecek-joke-kola-potable.jpg"},
+    new Bebida(1 ,'Licor' , 1,"https://m.media-amazon.com/images/I/61wXI+qSnRL._AC_SX679_.jpg"),
+    new Bebida(2 ,'Fernet' , 1, "https://www.publimetro.cl/resizer/E2u0vuYhG-jKoRLE-TGIeDjk-K8=/800x0/filters:format(jpg):quality(70):focal(138x62:148x72)/cloudfront-us-east-1.images.arcpublishing.com/metroworldnews/DXF3IXJRFRB6JOI67HU4C6XP3Y.jpg"),
+    new Bebida(3 ,'Coca-Cola' , 0,"https://st2.depositphotos.com/1029150/8188/i/450/depositphotos_81883680-stock-photo-coca-cola-drinks.jpg"),
+    new Bebida(4 ,'Jugo' , 0,"https://www.eurekaciencia.com/wp-content/uploads/2019/06/aroma-beverage-blur-96974.jpg"),
+    
   ];
 
   constructor(private route: ActivatedRoute) {}
