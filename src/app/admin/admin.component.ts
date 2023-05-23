@@ -7,7 +7,6 @@ import { Bebida } from '../bebidas';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent {
- //@Input() lista:Bebida;
   
  lista1: Bebida[] = [
   new Bebida(1 ,'Licor' , 1,"https://m.media-amazon.com/images/I/61wXI+qSnRL._AC_SX679_.jpg"),
