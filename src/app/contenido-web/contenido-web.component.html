@@ -11,7 +11,7 @@
             <div class="col-md-4">
               <div class="card">
                 <img
-                  src="https://w0.peakpx.com/wallpaper/823/850/HD-wallpaper-coco-cola-beverage-bomb-comic-drink-funny-icecek-joke-kola-potable.jpg"
+                  src="{{item.img}}"
                   class="card-img-top" alt="Imagen de bebida {{item.id}}">
                 <div class="card-body">
                   <h5 class="card-title">{{ item.id }}</h5>
@@ -20,8 +20,6 @@
               </div>
             </div>
           </td>
-          <!--  <td> {{ item.id }} </td>
-            <td> {{ item.nombre }} </td> -->
         </tr>
       </div>
     </div>
@@ -34,7 +32,7 @@
             <div *ngIf="(item1.permite == 1)" class="col-md-4">
               <div class="card">
                 <img
-                  src="https://w0.peakpx.com/wallpaper/823/850/HD-wallpaper-coco-cola-beverage-bomb-comic-drink-funny-icecek-joke-kola-potable.jpg"
+                  src="{{item1.img}}"
                   class="card-img-top" alt="Imagen de bebida {{item1.id}}">
                 <div class="card-body">
                   <h5 class="card-title">{{ item1.id }}</h5>
